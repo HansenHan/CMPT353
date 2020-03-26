@@ -1,0 +1,21 @@
+1. In your reddit_relative.py, what intermediate results did you .cache()? Briefly describe what would have happened if you hadn't used .cache() anywhere.(No need to time it, unless you really want to.) 
+
+I use the first .cache() after read.json(), which is comments.cache(). This because 'comments' is used more than once.
+I also used a second .cache() groupby, which is max_relativ.cache(). Same reason as above.
+By adding these cache() at this location, my program will run faster.
+
+
+
+2. How did marking DataFrames for broadcast affect the running time of the "best author" program above? 
+
+With broadcast:
+real	0m43.498s
+user	0m28.184s
+sys	0m2.220s
+
+Without broadcast:
+real	1m5.216s
+user	0m36.044s
+sys	0m2.340s
+
+Thus, using broadcast can improve 22 seconds. 
