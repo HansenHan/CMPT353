@@ -1,0 +1,15 @@
+1. Which model did the best for the colour-prediction task? Can you give a theory about why? Do you have any theory about why RGB/LAB/HSV worked better for different models? 
+
+From the scores of three models I got, I think KNN model is the best for colour prediction task. 
+The input colour is gradually varied and there is no boundary between different colours. The KNN model takes 10 neighboring points and choose the most common colour as the prediction colour. This is the best for the colour prediction. As for RF model, it is not as good as KNN model. Maybe it's because I didn't choose a better parameter(n_estimators, max_depth and min_samples_leaf) for the RF model. 
+RGB is a additive color model with three-primary colours(red, green and blue) and it add these three colours together in various way to produce different colours. LAB expresses colours in three values which are L(lightness from black(0) to white(100)), A(from green(-) to red(+)) and B(from blue(-) to yellow(+)). As for HSV, it is cylindrical geometry which more align with the way human vision perceives color-making attributes and colours of each hue are arranged in radial slice. Since RGB/LAB/HSV are express colours in different ways, thus in different models it shows different level of predictions. 
+Quote:
+https://en.wikipedia.org/wiki/CIELAB_color_space
+https://en.wikipedia.org/wiki/HSL_and_HSV
+
+        
+
+2. Have a look at the cities in your validation data where the weather model makes the wrong prediction. Do you feel like the model is making reasonable mistakes? Can you think of any weather features that we could potentially add to make better predictions? 
+
+I think the model makes reasonable midtakes. Since everytime I run the prediction, the result scores are different. And the mistakes may happened when the cities are close to each other, since these cities have the limilar weather and at the boundar there will be outliers.
+To make better predictions, we can use: wind speed, air pressure, sunset time and etc.

@@ -1,0 +1,23 @@
+Q1. In the A/B test analysis, do you feel like we're p-hacking? How comfortable are you coming to a conclusion at p<0.05?
+
+	I don't think we are p-hacking, since I think p-hacking is that we misuse data and try defferent methods to get reasonable result that we want. But in this question, we only considering 4 cases and using similar methods on each cases. Base on the result, we cannot give a conclusion on the first three cases which p_value>0.05; but as for the last case, we can say that instructors search more offen since the p_value<0.05. And doing 4 tests is not that many for the whole ananlysis to conclude p-hacking.
+
+
+Q2. If we had done T-tests between each pair of sorting implementation results, how many tests would we run? If we looked for p<0.05 in them, what would the probability be of having all conclusions correct, just by chance? That's the effective p-value of the many-T-tests analysis. 
+
+	We have to run 21(6+5+4+3+2+1) T-tests. The effective p-value of the T-tests analysis is 0.95^21 which roughly is 0.34056.
+
+
+Q3. Give a ranking of the sorting implementations by speed, including which ones could not be distinguished.
+
+	Here is the ranking of mean running times for the 7 sorting methods in ascending order:
+		        mean_time
+	partition_sort   0.015609
+	qs1              0.024102
+	qs3              0.034988
+	qs4              0.035572
+	qs5              0.036091
+	qs2              0.036442
+	merge1           0.037111
+
+	Based on the posthoc table, the pairs that cannot be distinguished is: qs2 and qs5.
