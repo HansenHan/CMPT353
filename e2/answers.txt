@@ -1,0 +1,11 @@
+Q1. In the hint above, what is the result of the calculation data['timestamp']*fit.slope + fit.intercept? What is the type, and describe the values. 
+
+The result of this calculation, data['prediction'] = data['timestamp']*fit.slope + fit.intercept, is the linear regression line of prediction in the dataframe which satisfies the equation y = ax + b with a as the slope, b as the intersect and y as the estimated value.
+If we use "type(data['prediction'])" to see, the type of the column is series. For each value, the type is float64 and the value of 'prediction' is between 10.709067516793567 and 14.288548383007559
+
+
+Q2. In the same hint, why does this produce a fit line on the graph? Why are the created_at values and timestamp values paired correctly to make points on the plot? 
+
+Because the linear regress function in Scipy(stats) can handle the series data conveniently and produce a regression line for us to predict the data. The fit line visually shows a relatively positive relationship between ratings and date time. 
+
+Based on the instruction: data['timestamp'] = data['created_at'].apply(to_timestamp), 'timestamp'(type is float64, a number) is converted from 'created_at'(type is timestamp, a date format). Essentially they are the same, just in different types and purposes. 'Created_at' can be used to give a time axis, while 'timestamp' offer numbers for the fitting line.

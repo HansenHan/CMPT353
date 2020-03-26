@@ -1,0 +1,27 @@
+1. Which of the four transforms suggested got you the closest to satisfying the assumptions of a T-test?
+
+The 'np.sqrt' transformation is the closest satisfying the assumptions of a T-test. The data is right-skewed, when I taking 'counts**2', the p-values of normaltest and p-value of levene are all smaller than 0.05 which means it fails the assumptions of T-test. When I taking 'np.exp', the result are INF, so we also cannot use this one. Taking 'np.log' and 'np.sqrt' are both same(fail one normaltest) for the assumption of normaltest, but the p-value of levene of taking 'np.log' is smaller than 0.05 which means it fails the equality of variances. When I taking 'np.sqrt', the p-value of levene is larger than 0.05, so it doesn't fail the equality of variances. Thus, 'np.sqrt' is better for T-test.
+
+
+
+2. I gave imprecise English translations of what the by-week test, and the Mann-Whitney test were actually testing. Do the same for the original T-test, and for the transformed data T-test. That is, describe what the conclusion would be if you could reject the null hypothesis in those tests.
+
+Original T-test: 
+Do the mean number of comments on weekend and weekday (in /r/canada and in 2012, 2013) differ? 
+If we can reject the null hypothesis, then we can conclude that the mean number of comments on weekends and weekdays (in /r/canada and in 2012, 2013) is different.
+
+Transformed data T-test: 
+Do the square roots of the mean number of comments on weekends and weekdays (in /r/canada in 2012 and 2013) differ?
+If we can reject the null hypothesis, then we can conclude that the square roots of the mean number of comments on weekends and weekdays  (in /r/canada in 2012 and 2013) is differ.
+
+
+
+3. Of the four approaches, which do you think actually does a better job of getting an answer for the original question: “are there a different number of Reddit comments posted on weekdays than on weekends?” Briefly explain why. (It's not clear to me that there is a single correct answer to this question.)
+
+I think Central Limit Theorem does a better job of getting an answer for the original question. Since after applying the Central Limit Theorem, 'groupby(['year','week']) and taking the mean value of 'comment_counts', the normal test and equality of variances test satisfy the requiements of T-test which means it can make the p-value of the result more convincing.
+
+
+
+4. When are more Reddit comments posted in /r/canada, on average weekdays or weekends? 
+
+More Reddit comments posted in /r/canada on average weekdays according to p-values and the histogram I get.

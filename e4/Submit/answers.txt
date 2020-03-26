@@ -1,0 +1,8 @@
+1. Based on your results for the last question, do you think daily temperatures are a good way to predict population density? Briefly explain why or why not. 
+
+	I don't think daily temperatures is a good way to predict population density; because from the graph, I don't see any relationship between these two variables. The points are randomly distributed and most of the points are located at the bottom-right of the graph. I tried to create the linear regression base on the data we get and it shows a horizontal line on the graph, which means there is no apparant associative relationship between there two variable. Therefore, it's not a good way to predict population desity by using daily temperatures. 
+
+
+2. The larger data file (stations.json.gz) was kept compressed on disk throughout the analysis. Decompressing every time we run the program seems inefficient. Why might this be faster than working with an uncompressed .json data?
+
+	Reading uncompressed data is slow since the size of the data is bigger than compressed data. Secondly, uncompressed data is readed from the hard drive and i/o process will take longer time. But using compressed data is decompressing it within RAM and read it from execution stack. Therefore, accessing compressed data is faster than accessing uncompressed data.

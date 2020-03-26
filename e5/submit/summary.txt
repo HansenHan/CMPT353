@@ -1,0 +1,92 @@
+# CMPT353 - Exercise 5 - Zelin Han
+
+data-1:
+
+X:	Mean: 8.717696
+	Standard deviation: 12.155517
+	Range: min: -22.635878, max: 35.237055
+y:	Mean: 12.522874
+	Standard deviation:  6.639964
+	Range: min: -2.565088, max: 27.384153
+
+Correlation coefficient(r) between x and y: 0.9503256954
+
+Description: Base on the r value and the graph, there is a strong correlation between x and y in data1, and the data points are scattered around a straight line.
+
+
+
+data-2:
+
+X:	Mean: -0.710787
+	Standard deviation: 11.481584
+	Range: min: -33.271113, max: 27.647000
+y:	Mean: -0.748987
+	Standard deviation: 6.257918
+	Range: min: -18.621804, max: 14.147315
+
+Correlation coefficient(r) between x and y: 0.9551531666
+
+Description: Base on the r value and the graph, there is a strong correlation between x and y in data2. and the data points are scattered around a straight line.
+
+
+
+data-3:
+
+X:	Mean:  0.968907
+	Standard deviation: 2.235558
+	Range: min: -2.449064, max: 4.518885
+y:	Mean: 8.508535
+	Standard deviation: 1.149301
+	Range: min: 6.641734, max: 10.551871
+
+Correlation coefficient(r) between x and y: 0.9819372647
+
+Description: Base on the r value and the graph, there is a strong correlation between x and y in data3, and the data points gather into four group.
+
+
+
+data-4:
+
+X:	Mean: 49.905086
+	Standard deviation: 28.508611
+	Range: min: 0.000000, max: 87.376700
+y:	Mean: 18.553837
+	Standard deviation: 16.545896
+	Range: min: 0.000000, max: 44.565040 
+
+Correlation coefficient(r) between x and y: -0.0811930674
+
+Description: Base on the r value and the graph, there is a very weak correlation between x and y in data4, and the graph is like a SFU logo.
+
+
+
+data-5:
+
+X:	Mean: 49.909994
+	Standard deviation: 28.500001
+	Range: min: 4.337892, max: 91.052863
+y:	Mean: 18.555525
+	Standard deviation: 16.540796
+	Range: min: 0.055498, max: 49.934197
+
+Correlation coefficient(r) between x and y: -0.0882359898
+
+Description: Base on the r value and the graph, there is a very weak correlation between x and y in data5, and the data points gather into five vertical lines.
+
+
+data-6:
+
+X:	Mean: 7.216155
+	Standard deviation: 11.921599
+	Range: min: -24.333821, max: 35.402139
+y:	Mean: 7.602215
+	Standard deviation: 11.764382
+	Range: min: -22.956357, max: 36.079874
+
+Correlation coefficient(r) between x and y: 0.9350685662
+
+Description: Base on the r value and the graph, there is a very strong correlation between x and y in data6, and the data points are scattered around a straight line but there are two outlier points.
+
+
+
+
