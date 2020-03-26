@@ -1,0 +1,37 @@
+1. How long did your reddit_averages.py take with (1) the reddit-0 data set and effectively no work, (2) no schema specified and not caching (on reddit-2 for this and the rest), (3) with a schema but not caching, (4) with both a schema and caching the twice-used DataFrame? [The reddit-0 test is effectively measuring the Spark startup time, so we can see how long it takes to do the actual work on reddit-2 in the best/worst cases.] 
+
+(1) For reddit-0: 
+real	0m6.181s
+user	0m17.248s
+sys	0m0.992s
+
+(2) For reddit-2: (no schema, no cache)
+real	0m16.801s
+user	0m28.424s
+sys	0m1.187s
+
+(3) For reddit-2: (with schema, no cache)
+real	0m11.359s
+user	0m24.390s
+sys	0m1.021s
+
+(4) For reddit-2: (with schema, with cache)
+real	0m8.818s
+user	0m21.499s
+sys	0m1.107s
+
+Using both schema and cache, there is a significant improvement in the running time.
+
+
+
+2. Based on the above, does it look like most of the time taken to process the reddit-2 data set is in reading the files, or calculating the averages? 
+
+The schema helps reading files and cache improves calculating averages. When I do nothing, the program spends about 6s on running 'reddit-0'. 
+For running 'reddit-2', when I only using schema, it imporves running time about 5s. When I using schema and cache, it imporves 3s from only using schema. So it looks like the program spends a little bit more time on reading files. 
+So I think, if we do not tell the program a schema, it will create a schema by itself and then create a dataframe by that. In this way, it takes a long time. The file is readed twice, as we learned in class.
+
+
+
+3. Where did you use .cache() in your wikipedia_popular.py? [Hint: the answer had better be “once”… but where?] 
+
+In the second part, I use the cache once before the groupby function. I try to use it in different place, and I find that when I use it before groupby function it imporve more on the running time. This is because after using some filters, I got a good data which is what I want and I can use more than once. After that, I need to use operations like groupby and join which using the data again in the join function. So if I cache the data, it will save some time.
